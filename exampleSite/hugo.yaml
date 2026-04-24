@@ -1,0 +1,357 @@
+baseURL: "https://sowbaranika1302.github.io/sowbaranika_portfolio/"
+languageCode: "en-us"
+title: "Sowbaranika Balasubramaniam"
+theme: hugo-profile
+themesDir: ".."
+
+# Multilingual configuration
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    contentDir: "content"
+    menu:
+      main: []
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+  #googleAnalytics:
+    #id: G-MEASUREMENT_ID
+  #disqus:
+    #shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main: []
+
+params:
+  title: "Sowbaranika Balasubramaniam"
+  description: "Sowbaranika Balasubramaniam — AI & ML Engineer, Data Scientist. Generative AI, RAG, LLMs, AWS. Austin, TX."
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "light"
+
+  color:
+    textColor: "#000000"
+    secondaryTextColor: "#1a1a1a"
+    textLinkColor: "#b71c1c"
+    backgroundColor: "#d4d4d4"
+    secondaryBackgroundColor: "#c4c4c4"
+    primaryColor: "#b71c1c"
+    secondaryColor: "#e0e0e0"
+    darkmode:
+      textColor: "#f5f5f5"
+      secondaryTextColor: "#e0e0e0"
+      textLinkColor: "#ef5350"
+      backgroundColor: "#2b2b2b"
+      secondaryBackgroundColor: "#3a3a3a"
+      primaryColor: "#ef5350"
+      secondaryColor: "#404040"
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Sowbaranika Balasubramaniam" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Sowbaranika Balasubramaniam"
+    subtitle: "AI & Machine Learning Engineer · Data Scientist"
+    content: "Actively seeking Data Scientist and ML roles. I design and deploy **RAG** systems, **agentic AI** workflows, and scalable ML on **AWS**—from LLM evaluation to serverless data pipelines—with a focus on low-latency, production-ready systems."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Download resume"
+      url: "/sowbaranika-balasubramaniam-resume.pdf"
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/joinwithsow/
+        - icon: fa fa-envelope
+          url: mailto:sowbaranika213@gmail.com
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/hero.svg"
+    content: |-
+      Experienced **Data Scientist** and **AI Engineer** with expertise in machine learning, deep learning, cloud computing (**AWS**, Docker, Terraform), and AI deployment. I build scalable, low-latency systems—including **retrieval-augmented generation (RAG)** pipelines, computer vision, and time-series forecasting—and care about turning research into reliable production services.
+
+      Currently a **Data Scientist at [Seemas AI](https://www.linkedin.com/company/seemas-ai)** in **Austin, TX**. M.S. Computer Science from **[The Ohio State University](https://www.osu.edu/)**; B.E. Computer Science from **PSG Institute of Technology and Applied Research**.
+
+      **Phone:** [+1 614-629-7150](tel:+16146297150) · **Email:** [sowbaranika213@gmail.com](mailto:sowbaranika213@gmail.com)
+    skills:
+      enable: true
+      title: "Technical focus"
+      items:
+        - "Python · PyTorch · Rust · SQL"
+        - "LangChain · LlamaIndex · LangGraph · CrewAI · OpenAI SDK"
+        - "RAG · vector DBs · OpenSearch · Elasticsearch · hybrid search"
+        - "AWS · Lambda · DynamoDB · Docker · Kubernetes · Terraform · CI/CD"
+        - "FastAPI · Pydantic · MLOps · LLM evaluation (e.g. RAGAS)"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - company: "Seemas AI"
+        companyUrl: "https://www.linkedin.com/company/seemas-ai"
+        jobs:
+          - name: "Data Scientist"
+            date: "Oct 2024 - Present"
+            content: |
+              - Built and deployed a **RAG** platform using web crawlers, unstructured data processing, LangChain chunking, embeddings, and **OpenSearch** for semantic search.
+              - Implemented context engineering, reranking, and guardrails to improve retrieval quality and reduce hallucinations.
+              - Delivered **FastAPI** services with **Pydantic** validation for production API integration.
+              - Ran **LLM evaluation** (e.g. RAGAS) with human-in-the-loop validation to improve relevance and answer quality.
+              - Developed **serverless ETL** on **AWS Lambda** and **DynamoDB** ingesting **1TB+** Morningstar financial data daily for near real-time analytics across regions.
+
+      - company: "Texas Advanced Computing Center (TACC)"
+        companyUrl: "https://tacc.utexas.edu/"
+        jobs:
+          - name: "Machine Learning Research Intern"
+            date: "Jun 2024 - Aug 2024"
+            content: |
+              - Developed edge-optimized ML models in **PyTorch** (~20% lower inference latency, ~15% lower memory) for resource-constrained IoT settings.
+              - Helped design an event-driven simulation stack using **FlatBuffers**, **Python**, **Rust**, **Docker**, and **Kubernetes**.
+              - Built a **React** dashboard for model configuration, monitoring, and benchmarking.
+
+      - company: "The Ohio State University"
+        companyUrl: "https://www.osu.edu/"
+        jobs:
+          - name: "AI Research Assistant"
+            date: "Jun 2022 - May 2024"
+            content: |
+              - Fine-tuned **CNNs** and **Vision Transformers** on 110K+ camera-trap images; **~95% accuracy** for species recognition supporting ecological monitoring.
+              - Integrated **YOLOv5** for detection preprocessing, cutting manual review ~**70%** and scaling throughput to **~5K images/day**.
+
+      - company: "Bloomfilter"
+        companyUrl: "https://www.linkedin.com/company/bloomfilter-inc"
+        jobs:
+          - name: "AI Software Engineer Intern"
+            date: "May 2023 - Aug 2023"
+            content: |
+              - Built **SARIMA** time-series models to forecast sprint scope changes (**~92% accuracy**), supporting scope-risk visibility for engineering teams.
+              - Implemented feature engineering and visualization pipelines for tree-structured data with **Django** and **React**.
+
+      - company: "Epsilon"
+        companyUrl: "https://www.linkedin.com/company/epsilon"
+        jobs:
+          - name: "Data Scientist"
+            date: "Jan 2018 - Dec 2021"
+            content: |
+              - Led behavioral analytics on **500K+** customer records; tuned **SQL** pipelines for real-time dashboards and improved data accuracy ~**25%** for personalization at scale (**1M+** users).
+              - Built models to optimize campaign targeting, lifting engagement ~**10%**.
+              - Delivered reporting and dashboards in **Tableau** and **Power BI** for faster stakeholder decisions.
+
+  # Education
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "Master of Science, Computer Science and Engineering"
+        school:
+          name: "The Ohio State University"
+          url: "https://www.osu.edu/"
+        date: "Aug 2024"
+        content: |-
+          Focus areas included machine learning, computer vision, data mining, and systems for ML workflows. Research on **camera traps**, edge vs. datacenter computing, and species classification; thesis work on **optimized classification in camera trap images** (smart camera traps, ML, and human inference).
+      - title: "Bachelor of Engineering, Computer Science"
+        school:
+          name: "PSG Institute of Technology and Applied Research"
+          url: "https://www.psgtech.ac.in/"
+        date: "May 2018"
+        content: |-
+          Activities: team captain (throwball), NSS volunteer, hostel joint secretary.
+
+  # Achievements (publications, awards, certifications)
+  achievements:
+    enable: true
+    items:
+      - title: "PEARC 2025 — Best Paper & Phil Andrews Award"
+        content: "ML Field Planner: Analyzing and Optimizing ML Pipelines for Field Research."
+        url: "https://dl.acm.org/doi/full/10.1145/3708035.3736013"
+      - title: "Thesis (2024)"
+        content: "Optimized Classification in Camera Trap Images — smart camera traps, ML, and human inference."
+      - title: "ACSOS 2023"
+        content: "A Framework for Autonomic Computing for In Situ Imageomics."
+      - title: "AWS certifications"
+        content: "Machine Learning Engineer – Associate; AI Practitioner; Solutions Architect – Associate; Data Engineer – Associate (resume dates 2025–2026)."
+      - title: "OCI & agentic AI"
+        content: "OCI Certified AI Foundations Associate (2025). AI Engineer Agentic Track — Agents & MCP (2026)."
+
+  # projects
+  projects:
+    enable: true
+    items:
+      - title: Autonomous equity trading simulation
+        content: Multi-agent trading simulation with four AI traders and a researcher using the OpenAI Agents SDK and MCP—44 MCP servers, custom tooling, and end-to-end tracing for decisions.
+        image: /images/hero.svg
+        badges:
+          - "OpenAI Agents"
+          - "MCP"
+          - "Python"
+        links:
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/in/joinwithsow/
+
+      - title: Financial research agent
+        content: CrewAI-based multi-agent financial research system with Serper search—researcher and analyst workflows producing structured reports at scale.
+        image: /images/hero.svg
+        badges:
+          - "CrewAI"
+          - "LLM"
+          - "Python"
+        links:
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/in/joinwithsow/
+
+      - title: Smart parking manager
+        content: Parking space detection with OpenCV and scikit-learn SVM classifiers; contour detection and feature extraction for real-time monitoring (~95% accuracy).
+        image: /images/hero.svg
+        badges:
+          - "OpenCV"
+          - "scikit-learn"
+        links:
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/in/joinwithsow/
+
+      - title: Text-based binary classifier
+        content: Tree-based models on unstructured text with scikit-learn and NumPy—feature standardization, hyperparameter tuning, ~92% accuracy.
+        image: /images/hero.svg
+        badges:
+          - "NLP"
+          - "scikit-learn"
+        links:
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/in/joinwithsow/
+
+      - title: Sports injury analysis
+        content: Tableau dashboards and Python EDA on NEISS injury data—patterns and risk trends for data-driven safety recommendations.
+        image: /images/hero.svg
+        badges:
+          - "Tableau"
+          - "Python"
+        links:
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/in/joinwithsow/
+
+  #Contact
+  contact:
+    enable: true
+    content: Open to Data Scientist and Machine Learning opportunities. Reach out by email or LinkedIn—whether you have a role, a collaboration, or a quick question.
+    btnName: Email me
+    btnLink: mailto:sowbaranika213@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      linkedin: https://www.linkedin.com/in/joinwithsow/
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
