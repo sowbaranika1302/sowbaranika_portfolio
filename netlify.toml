@@ -1,0 +1,10 @@
+[build]
+  publish = "public"
+  command = "cd exampleSite && hugo --gc --minify --environment production -d ../public"
+
+[build.environment]
+  HUGO_VERSION = "0.143.0"
+
+# Optional: override base URL per deploy preview (uncomment if you use this pattern)
+# [context.deploy-preview]
+#   command = "cd exampleSite && hugo --gc --minify --environment production -d ../public -b $DEPLOY_PRIME_URL"

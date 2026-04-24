@@ -1,4 +1,5 @@
-baseURL: "https://sowbaranika1302.github.io/sowbaranika_portfolio/"
+# Set to your live Netlify URL (Site configuration → Domain management), e.g. https://your-name.netlify.app/
+baseURL: "https://sowbaranika-portfolio.netlify.app/"
 languageCode: "en-us"
 title: "Sowbaranika Balasubramaniam"
 theme: hugo-profile
@@ -14,7 +15,17 @@ languages:
     weight: 1
     contentDir: "content"
     menu:
-      main: []
+      main:
+        - identifier: blog
+          name: Blog
+          title: Blog posts
+          url: /blogs
+          weight: 1
+        - identifier: gallery
+          name: Gallery
+          title: Image gallery
+          url: /gallery
+          weight: 2
 
 outputs:
   home:
@@ -42,7 +53,17 @@ markup:
       unsafe: true
 
 Menus:
-  main: []
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Gallery
+      url: /gallery
+      weight: 2
 
 params:
   title: "Sowbaranika Balasubramaniam"
@@ -67,25 +88,8 @@ params:
   animate: true
 
   theme:
-    disableThemeToggle: true
-    defaultTheme: "light"
-
-  color:
-    textColor: "#000000"
-    secondaryTextColor: "#1a1a1a"
-    textLinkColor: "#b71c1c"
-    backgroundColor: "#d4d4d4"
-    secondaryBackgroundColor: "#c4c4c4"
-    primaryColor: "#b71c1c"
-    secondaryColor: "#e0e0e0"
-    darkmode:
-      textColor: "#f5f5f5"
-      secondaryTextColor: "#e0e0e0"
-      textLinkColor: "#ef5350"
-      backgroundColor: "#2b2b2b"
-      secondaryBackgroundColor: "#3a3a3a"
-      primaryColor: "#ef5350"
-      secondaryColor: "#404040"
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark | auto
 
   font:
     fontSize: 1rem # default: 1rem
@@ -99,7 +103,7 @@ params:
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
     brandName: "Sowbaranika Balasubramaniam" # Brand name for the brand | default is the title variable
-    disableSearch: true
+    disableSearch: false
     # searchPlaceholder: "Search"
     stickyNavBar:
       enable : true
@@ -321,7 +325,7 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: false
+      enable: true
       disableFeaturedImage: false
     socialNetworks:
       linkedin: https://www.linkedin.com/in/joinwithsow/

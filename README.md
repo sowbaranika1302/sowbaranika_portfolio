@@ -25,21 +25,23 @@
 - Contact Form Integration ([FormSpree](https://formspree.io/))
 - Built with Bootstrap and Font Awesome
 
-## GitHub Pages (this portfolio)
+## Netlify (this portfolio)
 
-The site is built from `exampleSite/` and deployed with [GitHub Actions](.github/workflows/github-pages.yml).
+Deploy from the **repository root** (where `netlify.toml` lives). Netlify runs the build in [netlify.toml](netlify.toml) and publishes the `public/` folder.
 
-**Live URL (project site):** [https://sowbaranika1302.github.io/sowbaranika_portfolio/](https://sowbaranika1302.github.io/sowbaranika_portfolio/) — from repo [sowbaranika1302/sowbaranika_portfolio](https://github.com/sowbaranika1302/sowbaranika_portfolio).
-
-1. Push this project to that repository (see git commands below).
-2. In the repo: **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**.
-3. Push to **`main`** (or **`master`**) to run the workflow. The first deploy may take a minute; refresh the **Actions** tab if needed.
+1. In [Netlify](https://www.netlify.com/), **Add new site → Import an existing project** and connect your Git repo.
+2. Netlify should pick up **Build command** and **Publish directory** from `netlify.toml`. If you set them manually:  
+   - **Build command:** `cd exampleSite && hugo --gc --minify --environment production -d ../public`  
+   - **Publish directory:** `public`
+3. After the first deploy, copy your site URL (e.g. `https://something.netlify.app`) into **`baseURL`** in [`exampleSite/hugo.yaml`](exampleSite/hugo.yaml), commit, and redeploy so links and assets resolve correctly.
 
 Local preview:
 
 ```bash
-cd exampleSite && hugo server -D
+cd exampleSite && hugo server -D -e development
 ```
+
+Open **http://localhost:1313/**.
 
 ## Requirements
 
